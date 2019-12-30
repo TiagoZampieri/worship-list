@@ -1,0 +1,8 @@
+div.song-list-item {
+  display: flex;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,.08),0 3px 6px 0 rgba(0,0,0,.03);
+  align-items: center;
+  div.song-item-name, div.song-item-key {
+    flex-grow: 1;
+  }
+}
