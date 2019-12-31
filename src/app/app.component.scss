@@ -1,8 +1,40 @@
-div.song-list-item {
+div.song-list-container {
   display: flex;
+  padding: 16px;
+}
+
+div.song-card-item {
+  margin: 8px 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
   box-shadow: 0 3px 6px 0 rgba(0,0,0,.08),0 3px 6px 0 rgba(0,0,0,.03);
-  align-items: center;
-  div.song-item-name, div.song-item-key {
-    flex-grow: 1;
+  align-items: flex-start;
+  align-content: center;
+
+  div {
+    margin: 4px 0;
+  }
+
+  div.song-item-links button {
+    border: none;
+    outline: 0;
+    span {
+      color: #4a4a4a;
+    }
+  }
+
+  div.song-item-links button:not(:first-child){
+    margin-left: 4px;
+  }
+}
+
+@media (max-width: 415px) {
+  div.song-list-container {
+    flex-direction: column;
+    div.song-card-item {
+      width: 100%;
+    }
   }
 }

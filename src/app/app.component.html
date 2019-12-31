@@ -1,31 +1,27 @@
 <h1>Lista</h1>
 <button (click)="addSong()">criar musica</button>
-<div class="columns">
-  <div class="song-list-container column">
-    <div class="song-list-item" *ngFor="let song of songs">
+  <div class="song-list-container">
+    <div class="song-card-item" *ngFor="let song of songs">
       <div class="song-item-name">
-        <span>{{song.name}}</span>
+        <span class="is-large title">{{song.name}}</span>
+      </div>
+      <div class="song-item-artist">
+        <span class="capitalize">{{ song.artist || '-' }}</span>
       </div>
       <div class="song-item-key">
-        Tom: <span>{{song.key}}</span>
+        <span class="capitalize"><i class="fas fa-music"></i> {{ song.key || '-'}}</span>
       </div>
       <div class="song-item-links">
-        <button class="button">
-          <span class="icon is-small">
-            <i class="fas fa-bold"></i>
+        <button class="button icon-button light">
+          <span class="icon is-medium">
+            <i class="fas fa-play"></i>
           </span>
         </button>
-        <button class="button">
-          <span class="icon is-small">
-            <i class="fas fa-bold"></i>
-          </span>
-        </button>
-        <button class="button">
-          <span class="icon is-small">
-            <i class="fas fa-bold"></i>
+        <button class="button icon-button light">
+          <span class="icon is-medium">
+            <i class="fas fa-book-open"></i>
           </span>
         </button>
       </div>
     </div>
   </div>
-</div>

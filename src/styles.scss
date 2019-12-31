@@ -1,3 +1,23 @@
+@import 'assets/font.scss';
+@import 'assets/colors.scss';
+
 * {
   font-size: 16px;
+}
+
+.title {
+  color: $darkBlack;
+  text-transform: capitalize;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.icon-button {
+  border: none;
+}
+
+.icon-button:focus {
+  outline: none;
 }
