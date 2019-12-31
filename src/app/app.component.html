@@ -1,7 +1,8 @@
 <h1>Lista</h1>
+<button (click)="addSong()">criar musica</button>
 <div class="columns">
   <div class="song-list-container column">
-    <div class="song-list-item" *ngFor="let song of lista">
+    <div class="song-list-item" *ngFor="let song of songs">
       <div class="song-item-name">
         <span>{{song.name}}</span>
       </div>
