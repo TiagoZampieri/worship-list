@@ -34,7 +34,7 @@ export class SongService {
   }
 
   public createSong(song?: Song) {
-    const songData = {id: 1, name: 'Song Name', key: 'Song key', songUrl: 'song Url', chordsUrl: 'chords'},
+    const songData = {id: 1, name: 'Song Name', key: 'Song key', songUrl: 'song Url', chordsUrl: 'chords'};
     const query = this.fireStore.collection('songs');
     return query.add(songData);
   }
