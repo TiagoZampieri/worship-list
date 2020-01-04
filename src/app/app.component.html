@@ -12,16 +12,16 @@
         <span class="capitalize"><i class="fas fa-music"></i> {{ song.key || '-'}}</span>
       </div>
       <div class="song-item-links">
-        <button class="button icon-button light">
+        <a href="{{song.songUrl}}" class="button icon-button light" target="_blank">
           <span class="icon is-medium">
             <i class="fas fa-play"></i>
           </span>
-        </button>
-        <button class="button icon-button light">
+        </a>
+        <a href="{{song.chordsUrl}}" class="button icon-button light" target="_blank">
           <span class="icon is-medium">
             <i class="fas fa-book-open"></i>
           </span>
-        </button>
+        </a>
       </div>
     </div>
   </div>

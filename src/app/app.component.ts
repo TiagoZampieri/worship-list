@@ -26,8 +26,4 @@ export class AppComponent implements OnInit {
       this.songs = response;
     });
   }
-
-  addSong() {
-    this.songService.createSong().finally(() => this.getSongs());
-  }
 }
