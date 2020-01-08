@@ -1,9 +1,18 @@
+div.container-wrap {
+  background: #333;
+  height: 100%;
+}
+
 div.song-list-container {
   display: flex;
   padding: 16px;
+  flex-wrap: nowrap;
+  height: 100%;
+  overflow: auto;
 }
 
 div.song-card-item {
+  width: 350px;
   margin: 8px 0;
   padding: 16px;
   display: flex;
@@ -12,9 +21,21 @@ div.song-card-item {
   box-shadow: 0 3px 6px 0 rgba(0,0,0,.08),0 3px 6px 0 rgba(0,0,0,.03);
   align-items: flex-start;
   align-content: center;
+  background: #111;
 
   div {
     margin: 4px 0;
+  }
+
+  div.song-item-name span{
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  div.song-item-key {
+    span {
+      color: #f2f2f2;
+    }
   }
 
   div.song-item-links button {
@@ -25,8 +46,31 @@ div.song-card-item {
     }
   }
 
-  div.song-item-links button:not(:first-child){
+  div.song-item-links a.button {
+    border-radius: 25px;
+    background: #333;
+    padding: 18px;
+
+    span.is-medium {
+      font-size: 0.80em;
+      color: #f2f2f2;
+    }
+  }
+
+  div.song-item-links a:not(:first-child){
     margin-left: 4px;
+  }
+}
+
+div.loading {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  > span {
+    font-size: 1.20em;
+    margin-bottom: 8px;
   }
 }
 

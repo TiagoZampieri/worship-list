@@ -5,6 +5,10 @@
   font-size: 16px;
 }
 
+body {
+  height: 100vh;
+}
+
 .title {
   color: $darkBlack;
   text-transform: capitalize;
@@ -21,3 +25,21 @@
 .icon-button:focus {
   outline: none;
 }
+
+.text-light {
+  color: $light;
+}
+
+.text-light-dark {
+  color: $lightBlack;
+}
+
+.text-medium-black {
+  color: #c6c6c6;
+}
+
+.text-dark-black {
+  color: $darkBlack;
+}
+
+
