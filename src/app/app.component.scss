@@ -1,10 +1,8 @@
-div.container-wrap {
-  background: #333;
-  height: 100%;
-}
+@import '../assets/colors.scss';
 
 div.song-list-container {
   display: flex;
+  flex-wrap: wrap;
   padding: 16px;
   flex-wrap: nowrap;
   height: 100%;
@@ -14,7 +12,10 @@ div.song-list-container {
 div.song-card-item {
   width: 350px;
   margin: 8px 0;
+  background: $darkBlack;
   padding: 16px;
+  min-width: 300px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   border-radius: 4px;
@@ -28,6 +29,7 @@ div.song-card-item {
   }
 
   div.song-item-name span{
+<<<<<<< HEAD
     font-size: 1.5em;
     font-weight: bold;
   }
@@ -39,13 +41,31 @@ div.song-card-item {
   }
 
   div.song-item-links button {
+=======
+    color: #fff;
+  }
+
+  div.song-item-artist span {
+    color: #bbb;
+  }
+
+  div.song-item-key {
+    color: #fff;
+    flex: 1;
+  }
+
+  div.song-item-links a {
+>>>>>>> 990f81ba76fb2ddb91d9c3055ee80162ece654ec
     border: none;
+    background: $mediumBlack;
+    border-radius: 25px;
     outline: 0;
     span {
-      color: #4a4a4a;
+      color: #fff;
     }
   }
 
+<<<<<<< HEAD
   div.song-item-links a.button {
     border-radius: 25px;
     background: #333;
@@ -57,6 +77,8 @@ div.song-card-item {
     }
   }
 
+=======
+>>>>>>> 990f81ba76fb2ddb91d9c3055ee80162ece654ec
   div.song-item-links a:not(:first-child){
     margin-left: 4px;
   }
@@ -78,6 +100,7 @@ div.loading {
   div.song-list-container {
     flex-direction: column;
     div.song-card-item {
+      min-width: 100%;
       width: 100%;
     }
   }
