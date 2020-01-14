@@ -1,11 +1,17 @@
+@import '../assets/colors.scss';
+
 div.song-list-container {
   display: flex;
+  flex-wrap: wrap;
   padding: 16px;
 }
 
 div.song-card-item {
   margin: 8px 0;
+  background: $darkBlack;
   padding: 16px;
+  min-width: 300px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   border-radius: 4px;
@@ -17,15 +23,30 @@ div.song-card-item {
     margin: 4px 0;
   }
 
-  div.song-item-links button {
+  div.song-item-name span{
+    color: #fff;
+  }
+
+  div.song-item-artist span {
+    color: #bbb;
+  }
+
+  div.song-item-key {
+    color: #fff;
+    flex: 1;
+  }
+
+  div.song-item-links a {
     border: none;
+    background: $mediumBlack;
+    border-radius: 25px;
     outline: 0;
     span {
-      color: #4a4a4a;
+      color: #fff;
     }
   }
 
-  div.song-item-links button:not(:first-child){
+  div.song-item-links a:not(:first-child){
     margin-left: 4px;
   }
 }
@@ -34,6 +55,7 @@ div.song-card-item {
   div.song-list-container {
     flex-direction: column;
     div.song-card-item {
+      min-width: 100%;
       width: 100%;
     }
   }
