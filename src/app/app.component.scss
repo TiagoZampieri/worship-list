@@ -29,19 +29,6 @@ div.song-card-item {
   }
 
   div.song-item-name span{
-<<<<<<< HEAD
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-
-  div.song-item-key {
-    span {
-      color: #f2f2f2;
-    }
-  }
-
-  div.song-item-links button {
-=======
     color: #fff;
   }
 
@@ -55,7 +42,6 @@ div.song-card-item {
   }
 
   div.song-item-links a {
->>>>>>> 990f81ba76fb2ddb91d9c3055ee80162ece654ec
     border: none;
     background: $mediumBlack;
     border-radius: 25px;
@@ -65,20 +51,6 @@ div.song-card-item {
     }
   }
 
-<<<<<<< HEAD
-  div.song-item-links a.button {
-    border-radius: 25px;
-    background: #333;
-    padding: 18px;
-
-    span.is-medium {
-      font-size: 0.80em;
-      color: #f2f2f2;
-    }
-  }
-
-=======
->>>>>>> 990f81ba76fb2ddb91d9c3055ee80162ece654ec
   div.song-item-links a:not(:first-child){
     margin-left: 4px;
   }
