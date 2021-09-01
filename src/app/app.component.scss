@@ -10,7 +10,6 @@ div.song-list-container {
   padding: 16px;
   height: 100%;
   overflow: auto;
-  justify-content: space-between;
 }
 
 div.song-card-item {
@@ -81,5 +80,11 @@ div.loading {
       min-height: 200px;
       width: 100%;
     }
+  }
+}
+
+@media (min-width: 500px) {
+  div.song-list-container {
+    justify-content: space-between;
   }
 }
