@@ -75,6 +75,7 @@ div.loading {
   div.song-list-container {
     flex-direction: column;
     flex-wrap: nowrap;
+    padding-bottom: 70px;
     div.song-card-item {
       min-width: 100%;
       min-height: 200px;
