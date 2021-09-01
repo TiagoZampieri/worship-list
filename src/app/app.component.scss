@@ -1,12 +1,16 @@
-@import '../assets/colors.scss';
+@import "../assets/colors.scss";
+
+h1.title {
+  margin: 16px;
+}
 
 div.song-list-container {
   display: flex;
   flex-wrap: wrap;
   padding: 16px;
-  flex-wrap: nowrap;
   height: 100%;
   overflow: auto;
+  justify-content: space-between;
 }
 
 div.song-card-item {
@@ -19,7 +23,7 @@ div.song-card-item {
   display: flex;
   flex-direction: column;
   border-radius: 4px;
-  box-shadow: 0 3px 6px 0 rgba(0,0,0,.08),0 3px 6px 0 rgba(0,0,0,.03);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.08), 0 3px 6px 0 rgba(0, 0, 0, 0.03);
   align-items: flex-start;
   align-content: center;
   background: #111;
@@ -28,7 +32,7 @@ div.song-card-item {
     margin: 4px 0;
   }
 
-  div.song-item-name span{
+  div.song-item-name span {
     color: #fff;
   }
 
@@ -51,7 +55,7 @@ div.song-card-item {
     }
   }
 
-  div.song-item-links a:not(:first-child){
+  div.song-item-links a:not(:first-child) {
     margin-left: 4px;
   }
 }
@@ -63,7 +67,7 @@ div.loading {
   justify-content: center;
   align-items: center;
   > span {
-    font-size: 1.20em;
+    font-size: 1.2em;
     margin-bottom: 8px;
   }
 }
@@ -71,6 +75,7 @@ div.loading {
 @media (max-width: 415px) {
   div.song-list-container {
     flex-direction: column;
+    flex-wrap: nowrap;
     div.song-card-item {
       min-width: 100%;
       min-height: 200px;

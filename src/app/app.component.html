@@ -1,56 +1,59 @@
+<h1 class="title" style="color: #fff; font-size: 2em; font-weight: bold">
+  Músicas
+</h1>
 <div class="song-list-container">
-  <h1 style="color: #fff; font-size: 2em; font-weight: bold">Músicas</h1>
-  <input
-    *ngIf="songs"
-    [formControl]="searchCtrl"
-    class="input"
-    type="text"
-    placeholder="Procure a música pelo nome..."
-  />
-  <progress
-    *ngIf="!songs"
-    class="progress is-small is-dark"
-    max="100"
-    style="margin-top: 30em"
-  ></progress>
+  <ng-container *ngIf="!songs; else songListRef">
+    <progress
+      *ngIf="!songs"
+      class="progress is-small is-dark"
+      max="100"
+      style="margin-top: 30em"
+    ></progress>
+  </ng-container>
 
-  <div class="song-card-item" *ngFor="let song of songs">
-    <div class="song-item-name">
-      <span class="is-large title">{{ song.name }}</span>
+  <ng-template #songListRef>
+    <input
+      *ngIf="songs"
+      [formControl]="searchCtrl"
+      class="input"
+      type="text"
+      placeholder="Procure a música pelo nome..."
+    />
+
+    <div class="song-card-item" *ngFor="let song of songs">
+      <div class="song-item-name">
+        <span class="is-large title">{{ song.name }}</span>
+      </div>
+      <div class="song-item-artist">
+        <span class="capitalize">{{ song.artist || "-" }}</span>
+      </div>
+      <div class="song-item-key">
+        <span class="capitalize" alt="Tom"
+          ><i class="fas fa-music"></i> {{ song.key || "-" }}</span
+        >
+      </div>
+      <div class="song-item-links">
+        <a
+          href="{{ song.songUrl }}"
+          class="button icon-button light"
+          target="_blank"
+          alt="Tocar música"
+        >
+          <span class="icon is-medium">
+            <i class="fas fa-play"></i>
+          </span>
+        </a>
+        <a
+          href="{{ song.chordsUrl }}"
+          class="button icon-button light"
+          target="_blank"
+          alt="Cifras"
+        >
+          <span class="icon is-medium">
+            <i class="fas fa-book-open"></i>
+          </span>
+        </a>
+      </div>
     </div>
-    <div class="song-item-artist">
-      <span class="capitalize">{{ song.artist || "-" }}</span>
-    </div>
-    <div class="song-item-key">
-      <span class="capitalize" alt="Tom"
-        ><i class="fas fa-music"></i> {{ song.key || "-" }}</span
-      >
-    </div>
-    <div class="song-item-links">
-      <a
-        href="{{ song.songUrl }}"
-        class="button icon-button light"
-        target="_blank"
-        alt="Tocar música"
-      >
-        <span class="icon is-medium">
-          <i class="fas fa-play"></i>
-        </span>
-      </a>
-      <a
-        href="{{ song.chordsUrl }}"
-        class="button icon-button light"
-        target="_blank"
-        alt="Cifras"
-      >
-        <span class="icon is-medium">
-          <i class="fas fa-book-open"></i>
-        </span>
-      </a>
-    </div>
-    <div class="loading" style="margin-top: 24px" *ngIf="!songs">
-      <span class="text-light is-medium">Carregando...</span>
-      <progress class="progress is-small is-grey" max="100">15%</progress>
-    </div>
-  </div>
+  </ng-template>
 </div>
