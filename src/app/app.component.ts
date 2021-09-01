@@ -34,8 +34,7 @@ export class AppComponent implements OnInit {
 
   searchSong(search?: string): void {
     if (search) {
-      console.log("tem pesquisa", search);
-      this.songs = this.songs.filter((song) => {
+      this.songs = this.songsColletction.filter((song) => {
         return song.name.toLowerCase().includes(search.toLowerCase());
       });
       return;
