@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { SongService } from "./services/song.service";
 import { delay, take } from "rxjs/operators";
 import { Song } from "./models/song.model";
-import { FormControl } from "@angular/forms";
+import { UntypedFormControl } from "@angular/forms";
 
 @Component({
   selector: "app-root",
@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
 
   public songs: Song[];
   private songsColletction: Song[];
-  public searchCtrl = new FormControl("");
+  public searchCtrl = new UntypedFormControl("");
 
   constructor(private songService: SongService) {}
 
