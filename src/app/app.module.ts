@@ -1,14 +1,23 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { ApplicationConfig, NgModule, provideZoneChangeDetection } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { getFirestore, provideFirestore } from "@angular/fire/firestore";
 import { environment } from "src/environments/environment";
-import { initializeApp, provideFirebaseApp } from "@angular/fire/app";
-import { SongService } from "./services/song.service";
-import { initializeFirestore } from "@firebase/firestore";
+// import { SongService } from "./services/song.service";
+import { getFirestore, initializeFirestore } from "@firebase/firestore";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { provideFirebaseApp } from "@angular/fire/app";
+import { initializeApp } from "firebase/app";
+import { provideFirestore } from "@angular/fire/firestore";
+
+const appConfig: ApplicationConfig = { 
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore())
+  ]
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,10 +26,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore()),
   ],
-  providers: [],
+  providers: [appConfig.providers],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "worship-list:build"
+            "buildTarget": "worship-list:build",
           },
           "configurations": {
             "production": {
-              "browserTarget": "worship-list:build:production"
+              "buildTarget": "worship-list:build:production",
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "worship-list:build"
+            "buildTarget": "worship-list:build",
           }
         },
         "test": {
@@ -129,5 +129,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

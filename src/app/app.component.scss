@@ -1,4 +1,6 @@
-@import "../assets/colors.scss";
+$mediumBlack: #4a4a4a;
+$lightBlack: #666666;
+$light: #f2f2f2;
 
 h1.title {
   margin: 16px;
@@ -15,7 +17,7 @@ div.song-list-container {
 div.song-card-item {
   width: 350px;
   margin: 8px 0;
-  background: $darkBlack;
+  background: #222;
   padding: 16px;
   min-width: 300px;
   max-width: 300px;
@@ -46,7 +48,7 @@ div.song-card-item {
 
   div.song-item-links a {
     border: none;
-    background: $mediumBlack;
+    background: #4a4a4a;
     border-radius: 25px;
     outline: 0;
     span {
