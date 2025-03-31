@@ -37,7 +37,7 @@
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
-    "codelyzer": "^0.0.28",
+    "codelyzer": "^6.0.2",
     "eslint": "^9.23.0",
     "firebase-tools": "^13.34.0",
     "fuzzy": "^0.1.3",
